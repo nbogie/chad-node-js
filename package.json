@@ -6,9 +6,13 @@
     "author": "nbogie",
     "license": "MIT",
     "scripts": {
+        "dev": "node src/one.js",
         "format": "prettier --write ."
     },
     "devDependencies": {
         "prettier": "^3.2.5"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21"
     }
 }
