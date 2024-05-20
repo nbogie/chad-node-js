@@ -1,0 +1,14 @@
+{
+    "name": "chad-node-js",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "index.js",
+    "author": "nbogie",
+    "license": "MIT",
+    "scripts": {
+        "format": "prettier --write ."
+    },
+    "devDependencies": {
+        "prettier": "^3.2.5"
+    }
+}
