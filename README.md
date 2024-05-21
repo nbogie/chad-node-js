@@ -20,8 +20,13 @@ The following command, typed at the terminal when in this repo's directory , wil
 node src/one.js
 ```
 
-There are various examples in the `src` directory.  
+There are various examples in the `src` directory or in the `src/readlineDemos` subdirectory.
+
 You can try running each one with node.js using a similarly structured command to the one above.
+
+```bash
+node src/readlineDemos/pickAnAnimal.js
+```
 
 ## making another program
 
