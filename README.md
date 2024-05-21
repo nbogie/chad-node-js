@@ -37,3 +37,5 @@ node src/readlineDemos/pickAnAnimal.js
 ## About the readline-sync library
 
 The readline-sync library is not recommended for production work. However, it is used here because it is easier for beginners to reason about synchronous, linear code than to use Promises or callbacks.
+
+[Documentation for readline-sync usage](https://github.com/anseki/readline-sync/blob/master/README.md)
