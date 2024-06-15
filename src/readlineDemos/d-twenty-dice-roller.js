@@ -8,10 +8,8 @@
  //This damaged roll can either be a fixed number or a random roll. 
 
 import readline from "readline-sync";
-const rolledValue =  readline.questionInt("Please enter a number ");
-console.log ("The input number is " + enteredNumber);
-const squaredNumber= enteredNumber * enteredNumber;
-console.log("The squared number is ", squaredNumber);
-
-
-console.log("Goodbye. ");
+const dieToRoll =  readline.questionInt("What die? ");
+console.log ("The input number is " + dieToRoll);
+// generate a number between 1 and dieToRoll 
+const dieRolled = Math.ceil(dieToRoll * Math.random()); ;
+console.log("Rolled Outcome" + dieRolled);
