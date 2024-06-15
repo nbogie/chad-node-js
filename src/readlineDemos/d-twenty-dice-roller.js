@@ -16,3 +16,12 @@ console.log("Rolled Outcome" + dieRolled);
 const bonusToAdd = readline.questionInt("Are there bonuses to add? ");
 const modifiedRoll = dieRolled + bonusToAdd;
 console.log("The modified roll is " + modifiedRoll);
+const succeedingRoll = readline.questionInt("What is a successful roll? ");
+
+if (succeedingRoll < modifiedRoll) {
+    console.log("Successful hit! ");
+} 
+
+else {
+    console.log("Failed hit! ")
+}
