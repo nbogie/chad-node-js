@@ -11,10 +11,6 @@ const succeedingRoll = readline.questionInt("What is the success to hit ? ");
 const dieToRoll = readline.questionInt("What is the die to roll? ");
 console.log("The input number is " + dieToRoll);
 
-const dieToRollDamage = readline.questionInt(
-    "What is the die to roll for damage? ",
-);
-
 const dieRolled = Math.ceil(dieToRoll * Math.random());
 console.log("Rolled Outcome" + dieRolled);
 
@@ -24,9 +20,12 @@ const modifiedRoll = dieRolled + bonusToAdd;
 console.log("The modified roll is " + modifiedRoll);
 
 if (succeedingRoll <= modifiedRoll) {
-    const rollForDamage = Math.ceil(dieToRollDamage * Math.random());
     console.log("Successful hit! Rolling for damage.");
-    console.log(rollForDamage);
+    const dieToRollDamage = readline.questionInt(
+        "What is the die to roll for damage? ",
+    );
+    const rollForDamage = Math.ceil(dieToRollDamage * Math.random());
+    console.log("The damage inflicted is" + rollForDamage);
 } else {
     console.log("Failed hit! ");
 }
