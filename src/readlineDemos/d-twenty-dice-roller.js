@@ -1,7 +1,8 @@
-// generate a number for a successful roll.
+// input a number for a successful roll.
 //ask the user for the max number to be generated randomly.
 //ask the user if any bonuses are added to the generated number .
 //report whether the number is a successful hit or not.
+//if successful, ask the user for a number to be randomly generated for damage.
 
 import readline from "readline-sync";
 
@@ -19,7 +20,9 @@ const modifiedRoll = dieRolled + bonusToAdd;
 console.log("The modified roll is " + modifiedRoll);
 
 if (succeedingRoll <= modifiedRoll) {
-    console.log("Successful hit! ");
+    const rollForDamage = 100;
+    console.log("Successful hit! Rolling for damage." + rollForDamage);
+    console.log(rollForDamage);
 } else {
     console.log("Failed hit! ");
 }
