@@ -1,27 +1,25 @@
-//ask the dm for the number of dice to be rolled. Can be anywhere between 2 to 100.
-//Report the value to the dm .
-//Ask the dm if there are any bonuses to the roll.
-//report result to the dm .
-// Ask the dm the roll for success.
-// if the opposing force is an attacker, make a random roll with a d20.
-// If the first roll is greater than the second roll, ask the dm the damage to be applied to the attack.
-//This damaged roll can either be a fixed number or a random roll.
+// generate a number for a successful roll.
+//ask the user for the max number to be generated randomly.
+//ask the user if any bonuses are added to the generated number .
+//report whether the number is a successful hit or not.
 
 import readline from "readline-sync";
-const dieToRoll = readline.questionInt("What die? ");
+
+const succeedingRoll = readline.questionInt("What is the success to hit ? ");
+
+const dieToRoll = readline.questionInt("What is the die to roll? ");
 console.log("The input number is " + dieToRoll);
-// generate a number between 1 and dieToRoll
+
 const dieRolled = Math.ceil(dieToRoll * Math.random());
 console.log("Rolled Outcome" + dieRolled);
-const bonusToAdd = readline.questionInt("Are there bonuses to add? ");
+
+const bonusToAdd = readline.questionInt("Add any bonus to the roll. ");
+
 const modifiedRoll = dieRolled + bonusToAdd;
 console.log("The modified roll is " + modifiedRoll);
-const succeedingRoll = readline.questionInt("What is a successful roll? ");
 
-if (succeedingRoll < modifiedRoll) {
+if (succeedingRoll <= modifiedRoll) {
     console.log("Successful hit! ");
-} 
-
-else {
-    console.log("Failed hit! ")
+} else {
+    console.log("Failed hit! ");
 }
