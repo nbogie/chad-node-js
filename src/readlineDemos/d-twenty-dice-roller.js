@@ -6,12 +6,12 @@
 
 import readline from "readline-sync";
 
-const succeedingRoll = readline.questionInt("What is the success to hit ? ");
+const succeedingRoll = readline.questionInt("What is the roll to hit ? ");
 
-const dieToRoll = readline.questionInt("What is the die to roll? ");
-console.log("The input number is " + dieToRoll);
+const toHit = readline.questionInt("Roll to hit. ");
+console.log("The result of the die rolled is...  " + toHit);
 
-const dieRolled = Math.ceil(dieToRoll * Math.random());
+const dieRolled = rollDie(toHit);
 console.log("Rolled Outcome" + dieRolled);
 
 const bonusToAdd = readline.questionInt("Add any bonus to the roll. ");
@@ -24,8 +24,13 @@ if (succeedingRoll <= modifiedRoll) {
     const dieToRollDamage = readline.questionInt(
         "What is the die to roll for damage? ",
     );
-    const rollForDamage = Math.ceil(dieToRollDamage * Math.random());
+    const rollForDamage = rollDie(dieToRollDamage);
     console.log("The damage inflicted is" + rollForDamage);
 } else {
     console.log("Failed hit! ");
+}
+
+function 
+rollDie(numFaces) {
+    return Math.ceil(numFaces * Math.random());
 }
